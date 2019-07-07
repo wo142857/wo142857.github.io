@@ -1023,7 +1023,7 @@ canvas_ribbon:
 # # --------------------------------------------------------------
 # # add canvas-nest effect
 # # see detail from https://github.com/hustcc/canvas-nest.js
-canvas_nest: true
+# canvas_nest: true
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
