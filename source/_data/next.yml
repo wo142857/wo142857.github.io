@@ -197,8 +197,8 @@ site_state: true
 # Value before `||` delimiter is the target permalink.
 # Value after `||` delimiter is the name of FontAwesome icon. If icon (with or without delimiter) is not specified, globe icon will be loaded.
 social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+  GitHub: https://github.com/wo142857 || github
+  E-Mail: mailto:wo142857@gmail.com || envelope
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -1018,6 +1018,12 @@ canvas_ribbon:
   alpha: 0.6
   zIndex: -1
 
+# --------------------------------------------------------------
+# # background settings
+# # --------------------------------------------------------------
+# # add canvas-nest effect
+# # see detail from https://github.com/hustcc/canvas-nest.js
+canvas_nest: true
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS

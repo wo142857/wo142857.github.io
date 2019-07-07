@@ -7,8 +7,8 @@ title: Wo142857
 subtitle:
 description:
 keywords:
-author: John Doe
-language:
+author: wo142857
+language: zh-Hans
 timezone:
 
 # URL
@@ -26,7 +26,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: README.md
 
 # Writing
 new_post_name: :title.md # File name of new posts
