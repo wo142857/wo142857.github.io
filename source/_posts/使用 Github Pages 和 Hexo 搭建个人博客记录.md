@@ -29,6 +29,25 @@ Github Pages 分为两类：用户主页和项目主页。
 
 #### 二. 使用 Hexo + Next 生成博客
 
+详情请参考：[【Hexo 文档】](https://hexo.io/zh-cn/docs/)，[【Next 文档】](https://theme-next.org/docs/)；
+
+基本步骤如下：
+
+```shell
+# 安装 Hexo
+npm install -g hexo-cli
+# 生成 Hexo 项目
+hexo init [blog-demo]
+# clone 用户主页项目
+git clone https://github.com/{username}/{username}.github.io.git
+# clone & 配置 Next 主题
+git clone https://github.com/theme-next/hexo-theme-next themes/next
+# 生成项目
+hexo generate && hexo deploy
+```
+
+持续集成会在后续 CI 详述。
+
 #### 三. 配置
 
 1. 站点 _config.yml
@@ -46,9 +65,34 @@ Github Pages 分为两类：用户主页和项目主页。
 
 1. Archives
 
+   ```shell
+   hexo new post "文章标题"
+   ```
+
+   
+
 2. Categories
 
+   1. 生成 categories 页
+
+   ```shell
+   hexo new page categories
+   # 添加type: "categories"到内容中
+   vim source/categories/index.md
+   ```
+
+   2. 修改 scaffolds/post.md 添加 "categories:"
+   3. 文章中添加分类
+
 3. Tags
+
+   配置方式与 Categories 相同
+
+   ```shell
+   hexo new page tags
+   # 添加type: "tags"到内容中
+   vim source/tags/index.md
+   ```
 
 4. About
 
@@ -57,8 +101,6 @@ Github Pages 分为两类：用户主页和项目主页。
    - Read more >>
 
      `<!--more-->`
-
-   
 
 #### 五. CI
 
