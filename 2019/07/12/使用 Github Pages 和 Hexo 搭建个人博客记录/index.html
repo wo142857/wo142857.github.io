@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Wo142857">
 <meta property="og:description" content="【持续更新】记录个人博客使用过程中的一些配置信息">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-12T08:30:34.494Z">
+<meta property="og:updated_time" content="2019-07-12T08:48:55.103Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Github Pages 和 Hexo 搭建个人博客记录">
 <meta name="twitter:description" content="【持续更新】记录个人博客使用过程中的一些配置信息">
@@ -400,7 +400,7 @@
                 
               
 
-              <time title="Created: 2019-07-12 14:28:11 / Modified: 16:30:34" itemprop="dateCreated datePublished" datetime="2019-07-12T14:28:11+08:00">2019-07-12</time>
+              <time title="Created: 2019-07-12 14:28:11 / Modified: 16:48:55" itemprop="dateCreated datePublished" datetime="2019-07-12T14:28:11+08:00">2019-07-12</time>
             
 
             
@@ -469,7 +469,31 @@
 <p>需要在对应的项目仓库中设置：<code>Setting -&gt; Options -&gt; Github Pages</code> Source 选项，该项目就可以通过<code>{username}.github.io/{repo.name}</code>访问。 </p>
 </li>
 </ul>
-<h4 id="二-使用-Hexo-生成博客"><a href="#二-使用-Hexo-生成博客" class="headerlink" title="二. 使用 Hexo 生成博客"></a>二. 使用 Hexo 生成博客</h4><h4 id="三-配置-Next-主题"><a href="#三-配置-Next-主题" class="headerlink" title="三. 配置 Next 主题"></a>三. 配置 Next 主题</h4><h4 id="四-CI"><a href="#四-CI" class="headerlink" title="四. CI"></a>四. CI</h4>
+<h4 id="二-使用-Hexo-Next-生成博客"><a href="#二-使用-Hexo-Next-生成博客" class="headerlink" title="二. 使用 Hexo + Next 生成博客"></a>二. 使用 Hexo + Next 生成博客</h4><h4 id="三-配置"><a href="#三-配置" class="headerlink" title="三. 配置"></a>三. 配置</h4><ol>
+<li><p>站点 _config.yml</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 首页文章显示设置</span></span><br><span class="line"><span class="string">index_generator：</span></span><br><span class="line">	<span class="attr">order_by:</span> <span class="bullet">-date</span> <span class="comment"># 按文章创建时间倒序排列</span></span><br><span class="line">	<span class="attr">per_page:</span> <span class="number">10</span>    <span class="comment"># 10 篇分页</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>主题 _config.yml</p>
+</li>
+</ol>
+<h4 id="四-写"><a href="#四-写" class="headerlink" title="四. 写"></a>四. 写</h4><ol>
+<li><p>Archives</p>
+</li>
+<li><p>Categories</p>
+</li>
+<li><p>Tags</p>
+</li>
+<li><p>About</p>
+</li>
+<li><p>其他</p>
+<ul>
+<li><p>Read more &gt;&gt;</p>
+<p><code>&lt;!--more--&gt;</code></p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="五-CI"><a href="#五-CI" class="headerlink" title="五. CI"></a>五. CI</h4>
       
     </div>
 
@@ -699,7 +723,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一-Github-Pages-配置"><span class="nav-number">1.</span> <span class="nav-text">一. Github Pages 配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二-使用-Hexo-生成博客"><span class="nav-number">2.</span> <span class="nav-text">二. 使用 Hexo 生成博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三-配置-Next-主题"><span class="nav-number">3.</span> <span class="nav-text">三. 配置 Next 主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四-CI"><span class="nav-number">4.</span> <span class="nav-text">四. CI</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一-Github-Pages-配置"><span class="nav-number">1.</span> <span class="nav-text">一. Github Pages 配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二-使用-Hexo-Next-生成博客"><span class="nav-number">2.</span> <span class="nav-text">二. 使用 Hexo + Next 生成博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三-配置"><span class="nav-number">3.</span> <span class="nav-text">三. 配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四-写"><span class="nav-number">4.</span> <span class="nav-text">四. 写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五-CI"><span class="nav-number">5.</span> <span class="nav-text">五. CI</span></a></li></ol></div>
             
 
           </div>
