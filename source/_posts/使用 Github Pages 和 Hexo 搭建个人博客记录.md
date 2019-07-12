@@ -9,12 +9,23 @@ tags:
 - CI
 categories:
 - github
-
 ---
 
-#### 一. gitpages 配置
+【持续更新】记录个人博客使用过程中的一些关键信息
 
+<!--more-->
 
+#### 一. Github Pages 配置
+
+Github Pages 分为两类：用户主页和项目主页。
+
+- 用户主页
+
+  只需创建一个名称为`{username}.github.io`的项目仓库即可，这里的`username`务必于 Github 用户名相同。Github 会自动识别并将该仓库认定为用户主页仓库。
+
+- 项目主页
+
+  需要在对应的项目仓库中设置：`Setting -> Options -> Github Pages` Source 选项，该项目就可以通过`{username}.github.io/{repo.name}`访问。 
 
 #### 二. 使用 Hexo 生成博客
 
