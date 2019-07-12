@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Wo142857">
 <meta property="og:description" content="【持续更新】记录个人博客使用过程中的一些配置信息">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-12T08:48:55.103Z">
+<meta property="og:updated_time" content="2019-07-12T09:58:51.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Github Pages 和 Hexo 搭建个人博客记录">
 <meta name="twitter:description" content="【持续更新】记录个人博客使用过程中的一些配置信息">
@@ -400,7 +400,7 @@
                 
               
 
-              <time title="Created: 2019-07-12 14:28:11 / Modified: 16:48:55" itemprop="dateCreated datePublished" datetime="2019-07-12T14:28:11+08:00">2019-07-12</time>
+              <time title="Created: 2019-07-12 14:28:11 / Modified: 17:58:51" itemprop="dateCreated datePublished" datetime="2019-07-12T14:28:11+08:00">2019-07-12</time>
             
 
             
@@ -432,6 +432,19 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/07/12/使用 Github Pages 和 Hexo 搭建个人博客记录/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/12/使用 Github Pages 和 Hexo 搭建个人博客记录/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -469,7 +482,12 @@
 <p>需要在对应的项目仓库中设置：<code>Setting -&gt; Options -&gt; Github Pages</code> Source 选项，该项目就可以通过<code>{username}.github.io/{repo.name}</code>访问。 </p>
 </li>
 </ul>
-<h4 id="二-使用-Hexo-Next-生成博客"><a href="#二-使用-Hexo-Next-生成博客" class="headerlink" title="二. 使用 Hexo + Next 生成博客"></a>二. 使用 Hexo + Next 生成博客</h4><h4 id="三-配置"><a href="#三-配置" class="headerlink" title="三. 配置"></a>三. 配置</h4><ol>
+<h4 id="二-使用-Hexo-Next-生成博客"><a href="#二-使用-Hexo-Next-生成博客" class="headerlink" title="二. 使用 Hexo + Next 生成博客"></a>二. 使用 Hexo + Next 生成博客</h4><p>详情请参考：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">【Hexo 文档】</a>，<a href="https://theme-next.org/docs/" target="_blank" rel="noopener">【Next 文档】</a>；</p>
+<p>基本步骤如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装 Hexo</span></span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"><span class="meta">#</span><span class="bash"> 生成 Hexo 项目</span></span><br><span class="line">hexo init [blog-demo]</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">clone</span> 用户主页项目</span></span><br><span class="line">git clone https://github.com/&#123;username&#125;/&#123;username&#125;.github.io.git</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">clone</span> &amp; 配置 Next 主题</span></span><br><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br><span class="line"><span class="meta">#</span><span class="bash"> 生成项目</span></span><br><span class="line">hexo generate &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>持续集成会在后续 CI 详述。</p>
+<h4 id="三-配置"><a href="#三-配置" class="headerlink" title="三. 配置"></a>三. 配置</h4><ol>
 <li><p>站点 _config.yml</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 首页文章显示设置</span></span><br><span class="line"><span class="string">index_generator：</span></span><br><span class="line">	<span class="attr">order_by:</span> <span class="bullet">-date</span> <span class="comment"># 按文章创建时间倒序排列</span></span><br><span class="line">	<span class="attr">per_page:</span> <span class="number">10</span>    <span class="comment"># 10 篇分页</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -478,10 +496,27 @@
 </ol>
 <h4 id="四-写"><a href="#四-写" class="headerlink" title="四. 写"></a>四. 写</h4><ol>
 <li><p>Archives</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post "文章标题"</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ol>
+<ol start="2">
 <li><p>Categories</p>
+<ol>
+<li>生成 categories 页</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加<span class="built_in">type</span>: <span class="string">"categories"</span>到内容中</span></span><br><span class="line">vim source/categories/index.md</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>修改 scaffolds/post.md 添加 “categories:”</li>
+<li>文章中添加分类</li>
+</ol>
 </li>
 <li><p>Tags</p>
+<p>配置方式与 Categories 相同</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加<span class="built_in">type</span>: <span class="string">"tags"</span>到内容中</span></span><br><span class="line">vim source/tags/index.md</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>About</p>
 </li>
@@ -567,6 +602,13 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
 
   
 
@@ -876,6 +918,38 @@
   
 
   
+  
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://wo142857.github.io/2019/07/12/使用 Github Pages 和 Hexo 搭建个人博客记录/";
+    this.page.identifier = "2019/07/12/使用 Github Pages 和 Hexo 搭建个人博客记录/";
+    this.page.title = '使用 Github Pages 和 Hexo 搭建个人博客记录';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    window.addEventListener('load', loadComments, false);
+  
+</script>
+
+
+
 
 
   
