@@ -1,6 +1,6 @@
 [submodule "themes/next"]
 	path = themes/next
-	url = https://github.com/theme-next/hexo-theme-next.git
+	url = https://github.com/wo142857/hexo-theme-next.git
 [submodule "themes/maupassant-hexo"]
 	path = themes/maupassant-hexo
 	url = https://github.com/hiberabyss/maupassant-hexo.git
